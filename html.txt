@@ -1,0 +1,144 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>LOGIN PAGE</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing:border-box;
+		}
+		:root{
+			--green:#00ff00;
+		}
+		body{
+			background: linear-gradient(#02173f,#0a315e);
+			font-family: sans-serif;
+		}
+		.container{
+			height:100vh ;
+			display:flex ;
+			align-items:center ;
+			justify-content: center;
+			padding:2rem;
+			cursor: pointer;
+
+		}
+		.container form{
+			flex:0 1;
+			min-height:300px;
+			min-width:300px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			align-items: center;
+			column-gap: 10px;
+			background-color:#01163d;
+			padding: 1rem;
+			border-radius: 0.5rem;
+			-webkit-border-radius:0.5rem;
+			-moz-border-radius:0.5rem;
+			-ms-border-radius:0.5rem;
+			-o-border-radius:0.5rem;
+			box-shadow: 1px 2px 13px -1px #01163d;
+			cursor: pointer;
+		}
+		.container form h1{
+			font-size: 1.5rem;
+			color: white;
+			font-weight: 400;
+			margin-bottom: 1rem;
+		}
+		.container form .t-input {
+			position: relative;
+			width: 100%;
+		}
+		.container form .t-input input{
+			width: 100%;
+			min-width: 40px;
+			color: white;
+			background-color: transparent;
+			outline: none;
+			border: none;
+			font-size: 1rem;
+			font-weight: lighter;
+			position: relative;
+			white-space: 0.5;
+			caret-color: var(--green);
+		}
+		.container form .t-input input::placeholder{
+			opacity: 0;
+		}
+		.container form .t-input .b-line{
+			content: "";
+			position: absolute ;
+			height: 2px;
+			width: 35px;
+			background: linear-gradient(90deg,var(--green) 0%, transparent 100%);
+			bottom: 0;
+			left: 0;
+			transition-duration: 300ms;
+		}
+		.container form .t-input input:not(:placeholder-shown) ~ .b-line,
+		.container form .t-input:hover .b-line,
+		.container form .t-input:focus-within .b-line{
+			background: linear-gradient(90deg, var(--green) 0%,transparent 100%);
+			width: 100%;
+		}
+		.container form .t-input label{
+			outline: none;
+		}
+		.container form .t-input:hover label{
+			color: var(--green);
+		}
+		.container form .t-input input + label {
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			-webkit-transform:translateY(-50%);
+			-moz-transform:translateY(-50%);
+			-ms-transform:translateY(-50%);
+			-o-transform:translateY(-50%);	
+			color: white;
+			transition-duration: 150ms;
+		}
+		.check:hover{
+			color:whitesmoke;
+		}
+		a:hover{
+			color:red;
+		}
+		a:hover{
+	color: #fff;
+	text-decoration: none;
+	font-family: sans-serif;
+	background: linear-gradient(90deg, orchid, royalblue, violet, purple, blue);
+	background-size: 400px;
+	border-radius: 3rem;
+}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<form><h1>Login</h1>
+			<div class="username t-input">
+			<label for="username">username</label>
+			<input type="text" required="" id="username" placeholder="."/>
+			<div class="b-line"></div>
+			</div>
+			<div class="password t-input">
+			<label for="password">password</label>
+			<input type="text" required="" id="password" placeholder="********"/>
+			<div class="b-line"></div>
+		</div>
+		<div class="check">
+		<input type="checkbox" name="os" id="ch1">
+		<label for="ch1">Remember me</label>
+	</div>
+		<a href="#">login</a>
+	</div>
+</form>
+</body>
+</html>
